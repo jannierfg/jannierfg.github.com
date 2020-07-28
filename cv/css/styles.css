@@ -16,7 +16,7 @@ hr {
 }
 
 header {
-    background-image: url('../images/fondo.jpg');
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0)), url('../images/fondo.jpg');
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -24,11 +24,12 @@ header {
     position: relative;
 }
 
-.about,
-.experience,
-.photo,
-.datos {
-    padding: 30px 70px;
+.me,
+.skills,
+.contact,
+.studies,
+.experience-work {
+    padding: 30px 50px;
     display: block;
 }
 
@@ -51,6 +52,7 @@ header .container {
 
 .datos {
     margin-top: 70px;
+    margin-right: 70px;
     color: #ffffff;
 }
 
@@ -150,4 +152,53 @@ header .container {
 
 .studies dl dd {
     padding-left: 20px;
+}
+
+@media (max-width: 1000px) {
+    .me,
+    .skills,
+    .contact,
+    .studies,
+    .experience-work {
+        padding: 30px 20px;
+        display: block;
+    }
+}
+
+@media (max-width: 900px) {
+    .photo {
+        margin-left: 0;
+    }
+    .content .container {
+        display: block;
+    }
+    .about,
+    .experience {
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    header .container {
+        display: block;
+    }
+    .photo,
+    .datos {
+        width: 100%;
+        margin: 0;
+    }
+    .photo,
+    .name,
+    .title {
+        text-align: center;
+        font-size: 25px;
+    }
+    .photo img {
+        margin-top: 40px;
+    }
+    .me,
+    .skills,
+    .contact {
+        margin-bottom: 0px;
+    }
 }
