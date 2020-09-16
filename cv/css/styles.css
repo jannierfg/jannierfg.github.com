@@ -63,20 +63,20 @@ header .container {
 
 .name {
     font-size: 35px;
-    text-align: right;
+    text-align: center;
     font-weight: 700;
 }
 
 .title {
-    text-align: right;
+    text-align: center;
     font-size: 35px;
 }
 
 .socials {
     display: flex;
-    float: right;
     justify-content: space-between;
-    width: 170px;
+    width: 150px;
+    margin: auto;
 }
 
 .socials a {
@@ -229,14 +229,25 @@ header .container {
     .name,
     .title {
         text-align: center;
-        font-size: 25px;
+        font-size: 18px;
     }
     .photo img {
-        margin-top: 40px;
+        margin-top: 20px;
     }
     .me,
     .skills,
     .contact {
         margin-bottom: 0px;
+    }
+    .me p,
+    .item-experience p,
+    .etiqueta p {
+        font-size: 14px;
+    }
+    .item-experience .label {
+        font-size: 13px;
+    }
+    .item-experience h3 {
+        font-size: 15px;
     }
 }
