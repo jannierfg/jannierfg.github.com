@@ -2,17 +2,22 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Lucida console', sans-serif;
 }
 
 h3 {
     font-size: 26px;
     margin-bottom: 10px;
+    color: #1565C0;
 }
 
 hr {
     width: 30%;
     margin-bottom: 10px;
+}
+
+p {
+    color: #3d3d50
 }
 
 header {
@@ -67,6 +72,17 @@ header .container {
     font-size: 35px;
 }
 
+.socials {
+    display: flex;
+    float: right;
+    justify-content: space-between;
+    width: 170px;
+}
+
+.socials a {
+    text-decoration: none;
+}
+
 .content {
     display: block;
 }
@@ -99,7 +115,7 @@ header .container {
 
 .etiqueta i {
     color: #fff;
-    background: #aaa;
+    background: #1565C0;
     padding: 10px;
     border-radius: 50px;
     width: 16px;
@@ -115,29 +131,33 @@ header .container {
     color: #000;
 }
 
-.skills ul {
-    padding-left: 15px;
+.skills-details span {
+    padding: 10px 20px;
+    background: #ffffff;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 50px;
+    color: #7f8c8d;
 }
 
-.skills ul li {
-    margin-bottom: 10px;
+.item-experience {
+    margin-bottom: 4em;
 }
 
-.experience-work p {
-    font-size: 20px;
+.item-experience label {
+    color: #7f8c8d;
+    font-size: 13px;
+}
+
+.item-experience h3 {
+    color: #121B22;
+    font-size: 22px;
     font-weight: 600;
 }
 
-.experience-work ul {
-    padding-left: 15px;
-    padding-bottom: 35px;
-}
-
-.experience-work ul li {
-    font-size: 17px;
-    margin-bottom: 12px;
-    padding-right: 30px;
-    padding-top: 10px;
+.item-experience p {
+    font-size: 15px;
 }
 
 .studies dl {
