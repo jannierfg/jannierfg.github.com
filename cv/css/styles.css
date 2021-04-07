@@ -2,115 +2,139 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Lucida console', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-h3 {
-    font-size: 26px;
-    margin-bottom: 10px;
-    color: #1565C0;
+.page {
+    background: #121B22;
 }
 
-hr {
-    width: 30%;
-    margin-bottom: 10px;
-}
-
-p {
-    color: #3d3d50
-}
-
-header {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0)), url('../images/fondo.jpg');
-    background-position: center;
-    background-size: cover;
+.container {
     width: 100%;
-    height: 45vh;
-    position: relative;
-}
-
-.me,
-.skills,
-.contact,
-.studies,
-.experience-work {
-    padding: 30px 50px;
-    display: block;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.photo {
-    margin-top: 40px;
-    margin-left: 82px;
-}
-
-.photo img {
-    width: 150px;
-    border-radius: 100px;
-    background: #eee;
-    padding: 5px;
-}
-
-.datos {
-    margin-top: 70px;
-    margin-right: 70px;
-    color: #ffffff;
-}
-
-.name {
-    font-size: 35px;
-    text-align: center;
-    font-weight: 700;
-}
-
-.title {
-    text-align: center;
-    font-size: 35px;
-}
-
-.socials {
-    display: flex;
-    justify-content: space-between;
-    width: 150px;
+    max-width: 1200px;
     margin: auto;
 }
 
-.socials a {
+.about-me,
+.data-me {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+.photo-about {
+    width: 40%;
+}
+
+.text-about {
+    width: 60%
+}
+
+.photo img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #888;
+    padding: 15px;
+}
+
+.text {
+    margin-top: 50px;
+}
+
+.text h3 {
+    color: #eee;
+    font-size: 48px;
+    line-height: 56px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.text h4 {
+    font-size: 16px;
+    color: #aaa;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 14px;
+    color: #d5d5d5;
+    margin: 0 0 20px;
+}
+
+.buttons button,
+.buttons a {
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: transparent;
+    margin-right: 10px;
+    cursor: pointer;
     text-decoration: none;
 }
 
-.content {
+.buttons a.download {
+    border: 3px solid #3D619B;
+    color: #f6f6f6;
+}
+
+.buttons a.download:hover {
+    background: #3D619B;
+}
+
+.buttons a.contact {
+    border: 3px solid #F8333D;
+    color: #f6f6f6;
+}
+
+.buttons a.contact:hover {
+    background: #F8333D;
+}
+
+.studies h2,
+.skills h2,
+.experience h2,
+.contact h2 {
+    display: inline-block;
+    position: relative;
+    font-size: 21px;
+    margin: 0 0 30px;
+    margin-top: 0px;
+    z-index: 1;
+    padding-bottom: 7px;
+    color: #eee;
+}
+
+.studies h2::before,
+.skills h2::before,
+.experience h2::before,
+.contact h2::before {
     display: block;
+    position: absolute;
+    content: '';
+    width: 100%;
+    background-color: #353535;
+    height: 2px;
+    bottom: 0;
 }
 
-.content .container {
-    display: flex;
-}
-
-.about {
-    background: #fff;
-    width: 35%;
-}
-
-.experience {
-    width: 75%;
-    background: #eee;
-}
-
-.me,
-.skills,
-.contact {
-    margin-bottom: 50px;
+.studies h2::after,
+.skills h2::after,
+.experience h2::after,
+.contact h2::after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 30px;
+    background-color: #F8333D;
+    height: 2px;
+    bottom: 0;
 }
 
 .etiqueta {
     position: relative;
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .etiqueta i {
@@ -126,128 +150,186 @@ header .container {
 .etiqueta p {
     position: absolute;
     left: 50px;
-    top: 8px;
+    top: 5px;
     font-size: 18px;
-    color: #000;
+    color: #d5d5d5;
 }
 
-.skills-details span {
-    padding: 10px 20px;
-    background: #ffffff;
-    display: inline-block;
-    margin-top: 10px;
-    margin-left: 20px;
-    border-radius: 50px;
-    color: #7f8c8d;
+.skills-contact {
+    width: 40%;
+    padding: 10px;
+}
+
+.studies-experence {
+    width: 60%;
+    padding: 10px;
 }
 
 .item-experience {
-    margin-bottom: 4em;
+    position: relative;
+    padding: 10px 0 20px 40px;
+}
+
+.item-experience:first-child {
+    padding-top: 3px;
+}
+
+.item-experience::before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    background-color: #333;
+    width: 1px;
+    left: 15px;
+    bottom: 5px;
+}
+
+.item-experience::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 1px;
+    width: calc(100% - 15px);
+    left: 15px;
+    bottom: 3px;
 }
 
 .item-experience label {
-    color: #7f8c8d;
+    display: inline-block;
+    position: relative;
     font-size: 13px;
+    font-weight: 500;
+    margin: 0 0 5px -40px;
+    margin-top: 0px;
+    color: #d5d5d5;
+    background-color: #222;
+    padding: 0 10px;
+    line-height: 23px;
+    border: 2px solid #007ced;
+    border-radius: 30px;
 }
 
-.item-experience h3 {
-    color: #121B22;
-    font-size: 22px;
-    font-weight: 600;
+.item-experience h4 {
+    color: #eee;
 }
 
 .item-experience p {
-    font-size: 15px;
+    color: #d5d5d5;
+    font-size: .92em;
 }
 
-.studies dl {
-    font-size: 17px;
-    margin-bottom: 12px;
-    padding-top: 20px;
+.skills-details span {
+    display: block;
 }
 
-.studies dl dt {
-    font-weight: 700;
+.skill-title {
+    color: #d5d5d5;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
 }
 
-.studies dl dd {
-    padding-left: 20px;
+.skill-container {
+    position: relative;
+    background-color: transparent;
+    border: 2px solid #444;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 1.4px;
 }
 
-.whatsapp {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 40px;
-    background-color: #25d366;
-    color: #FFF;
-    border-radius: 50px;
+.skill-percentage {
+    background-color: #007ced;
+    -moz-border-radius: 9px;
+    -webkit-border-radius: 9px;
+    border-radius: 9px;
+    height: 8px;
+    padding: 0;
+}
+
+footer {
+    padding: 2em;
     text-align: center;
-    font-size: 30px;
-    z-index: 100;
+    color: #eee;
 }
 
-.whatsapp-icon {
-    margin-top: 13px;
+.socials {
+    border-top: 2px solid #F8333D;
+    padding-top: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.socials a {
+    margin: 15px;
+    text-decoration: none;
+    color: #d5d5d5;
+    font-size: 12px;
 }
 
 @media (max-width: 1000px) {
-    .me,
-    .skills,
-    .contact,
-    .studies,
-    .experience-work {
-        padding: 30px 20px;
-        display: block;
+    .about-me,
+    .data-me {
+        padding: 0.5em;
+    }
+    .photo-about,
+    .text-about {
+        width: 50%
     }
 }
 
-@media (max-width: 900px) {
-    .photo {
-        margin-left: 0;
+@media (max-width: 800px) {
+    .photo-about,
+    .text-about {
+        width: 100%
     }
-    .content .container {
+    .about-me,
+    .data-me {
         display: block;
     }
-    .about,
-    .experience {
+    .photo-about {
         width: 100%;
-    }
-}
-
-@media (max-width: 700px) {
-    header .container {
-        display: block;
-    }
-    .photo,
-    .datos {
-        width: 100%;
-        margin: 0;
-    }
-    .photo,
-    .name,
-    .title {
         text-align: center;
-        font-size: 18px;
+        padding-top: 2em;
     }
+    .text-about {
+        text-align: center;
+    }
+    .text {
+        padding: 0 2em;
+    }
+    .text p {
+        text-align: justify;
+    }
+    .data-me {
+        padding: 0 3em;
+    }
+    .skills-contact,
+    .studies-experence {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media (max-width: 500px) {
     .photo img {
-        margin-top: 20px;
+        width: 200px;
+        height: 200px;
     }
-    .me,
-    .skills,
-    .contact {
-        margin-bottom: 0px;
+    .text h3 {
+        font-size: 30px;
     }
-    .me p,
-    .item-experience p,
-    .etiqueta p {
-        font-size: 14px;
-    }
-    .item-experience .label {
-        font-size: 13px;
-    }
-    .item-experience h3 {
-        font-size: 15px;
+    .text,
+    .data-me {
+        padding: 0 1em;
     }
 }
